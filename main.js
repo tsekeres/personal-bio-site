@@ -40,14 +40,14 @@ const createProjectCards = (taco) => {
   for (let [i, element] of taco.entries()) {
     if (taco[i].available === true) {
     domString += `<div class="card my-2 h-200" style="width: 18rem;" id=${i}>
+                    <div class="card-header text-center">${element.title}</div>
+                    <img src=${element.screenshot} class="card-img-top">
                     <div class="card-body">
-                      <h5 class="card-title text-center">${element.title}</h5>
                       <p class="card-description">${element.description}</p>
                       <p class="card-tech">${element.technologiesUsed}</p>
                       <a href="#" class="card-link">${element.url}</a>
                       <a href="#" class="card-link">${element.githubUrl}</a>
                     </div>
-                    <img src=${element.screenshot} class="card-img-bottom">
                   </div>`;
     }
   }
